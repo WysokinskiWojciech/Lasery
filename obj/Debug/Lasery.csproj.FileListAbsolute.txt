@@ -1,0 +1,15 @@
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\bin\Debug\Lasery.exe.config
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\bin\Debug\Lasery.exe
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\bin\Debug\Lasery.pdb
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\MainWindow.g.cs
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\App.g.cs
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery_MarkupCompile.cache
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery_MarkupCompile.lref
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\MainWindow.baml
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.g.resources
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.Properties.Resources.resources
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.csproj.GenerateResource.cache
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.exe
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\Debug\Lasery.pdb

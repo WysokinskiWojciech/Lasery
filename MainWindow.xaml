@@ -1,0 +1,130 @@
+﻿<Window x:Class="Lasery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lasery"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800
+        " Width="1200" KeyDown="Window_KeyDown">
+    <Grid Background="#FF1FB470" Margin="0,0,-8,-31" Width="1200" Height="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="191*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="START" Content="START" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="START_Click"/>
+        <Button x:Name="ON" Content="ON" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="ON_Click"/>
+        <Button x:Name="OFF" Content="OFF" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="OFF_Click"/>
+        <Label x:Name="COM_PORT_SCAN" Content="" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top" Height="30" Width="300"/>
+        <Button x:Name="POMIAR" Content="POMIAR" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="POMIAR_Click"/>
+        <Button x:Name="POMIAR_CIAGLY" Content="POMIAR CIĄGŁY" HorizontalAlignment="Left" Height="30" Margin="10,150,0,0" VerticalAlignment="Top" Width="120" Click="POMIAR_CIAGLY_Click"/>
+
+
+        <Label Content="Laser 1 &#x0a;Ściana górna" HorizontalAlignment="Left" Margin="95,311,0,0" VerticalAlignment="Top" Height="43" Width="83" Grid.Column="1"/>
+        <Button x:Name="ON1" Content="ON1" HorizontalAlignment="Left" Margin="190,310,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="ON1_Click"/>
+        <Button x:Name="OFF1" Content="OFF1" HorizontalAlignment="Left" Margin="235,310,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="OFF1_Click"/>
+        <Button x:Name="POMIAR1" Content="POMIAR1" HorizontalAlignment="Left" Height="18" Margin="190,335,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="POMIAR1_Click"/>
+        <Label x:Name="Laser1" Content="0" HorizontalAlignment="Left" Height="73" Margin="95,233,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
+
+        <Label Content="Laser 2 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="228,466,0,0" VerticalAlignment="Top" Height="43" Width="94" Grid.Column="1"/>
+        <Button x:Name="ON2" Content="ON2" HorizontalAlignment="Left" Margin="323,469,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="ON2_Click"/>
+        <Button x:Name="OFF2" Content="OFF2" HorizontalAlignment="Left" Margin="368,469,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="OFF2_Click"/>
+        <Button x:Name="POMIAR2" Content="POMIAR2" HorizontalAlignment="Left" Height="18" Margin="323,494,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="POMIAR2_Click"/>
+        <Label x:Name="Laser2" Content="0" HorizontalAlignment="Left" Height="73" Margin="228,391,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
+
+        <Label Content="Laser 4 &#xA;Na połączeniu" HorizontalAlignment="Left" Margin="339,623,0,0" VerticalAlignment="Top" Height="43" Width="88" Grid.Column="1"/>
+        <Button x:Name="ON4" Content="ON4" HorizontalAlignment="Left" Margin="434,625,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="ON4_Click"/>
+        <Button x:Name="OFF4" Content="OFF4" HorizontalAlignment="Left" Margin="479,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Grid.Column="1" Click="OFF4_Click"/>
+        <Button x:Name="POMIAR4" Content="POMIAR4" HorizontalAlignment="Left" Height="18" Margin="434,650,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="POMIAR4_Click"/>
+        <Label x:Name="Laser4" Content="0" HorizontalAlignment="Left" Height="73" Margin="339,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
+
+        <Label Content="Laser 3 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="149,623,0,0" VerticalAlignment="Top" Height="43" Width="88" Grid.Column="1"/>
+        <Button x:Name="ON3" Content="ON3" HorizontalAlignment="Left" Margin="244,625,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="ON3_Click"/>
+        <Button x:Name="OFF3" Content="OFF3" HorizontalAlignment="Left" Margin="289,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Grid.Column="1" Click="OFF3_Click"/>
+        <Button x:Name="POMIAR3" Content="POMIAR3" HorizontalAlignment="Left" Height="18" Margin="244,650,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="POMIAR3_Click"/>
+        <Label x:Name="Laser3" Content="0" HorizontalAlignment="Left" Height="73" Margin="149,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
+
+        <Label Content="Laser 5&#xA;Ściana górna" HorizontalAlignment="Left" Margin="366,311,0,0" VerticalAlignment="Top" Height="43" Width="83"/>
+        <Button x:Name="ON5" Content="ON5" HorizontalAlignment="Left" Margin="461,310,0,0" VerticalAlignment="Top" Width="40" Click="ON5_Click"/>
+        <Button x:Name="OFF5" Content="OFF5" HorizontalAlignment="Left" Margin="506,310,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF5_Click"/>
+        <Button x:Name="POMIAR5" Content="POMIAR5" HorizontalAlignment="Left" Height="18" Margin="461,335,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR5_Click"/>
+        <Label x:Name="Laser5" Content="0" HorizontalAlignment="Left" Height="73" Margin="366,233,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Label Content="Laser 6 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="516,466,0,0" VerticalAlignment="Top" Height="43" Width="94"/>
+        <Button x:Name="ON6" Content="ON6" HorizontalAlignment="Left" Margin="611,469,0,0" VerticalAlignment="Top" Width="40" Grid.ColumnSpan="2" Click="ON6_Click"/>
+        <Button x:Name="OFF6" Content="OFF6" HorizontalAlignment="Left" Margin="29,469,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Grid.Column="1" Click="OFF6_Click"/>
+        <Button x:Name="POMIAR6" Content="POMIAR6" HorizontalAlignment="Left" Height="18" Margin="611,494,0,0" VerticalAlignment="Top" Width="85" Grid.ColumnSpan="2" Click="POMIAR6_Click"/>
+        <Label x:Name="Laser6" Content="0" HorizontalAlignment="Left" Height="73" Margin="516,391,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
+
+        <Label Content="Laser 8 &#xA;Na połączeniu" HorizontalAlignment="Left" Margin="576,623,0,0" VerticalAlignment="Top" Height="43" Width="88" Grid.ColumnSpan="2"/>
+        <Button x:Name="ON8" Content="ON8" HorizontalAlignment="Left" Margin="44,625,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="ON8_Click"/>
+        <Button x:Name="OFF8" Content="OFF8" HorizontalAlignment="Left" Margin="89,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Grid.Column="1" Click="OFF8_Click"/>
+        <Button x:Name="POMIAR8" Content="POMIAR8" HorizontalAlignment="Left" Height="18" Margin="44,650,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="POMIAR8_Click"/>
+        <Label x:Name="Laser8" Content="0" HorizontalAlignment="Left" Height="73" Margin="576,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
+
+        <Label Content="Laser 7 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="380,623,0,0" VerticalAlignment="Top" Height="43" Width="88"/>
+        <Button x:Name="ON7" Content="ON7" HorizontalAlignment="Left" Margin="475,625,0,0" VerticalAlignment="Top" Width="40" Click="ON7_Click"/>
+        <Button x:Name="OFF7" Content="OFF7" HorizontalAlignment="Left" Margin="520,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF7_Click"/>
+        <Button x:Name="POMIAR7" Content="POMIAR7" HorizontalAlignment="Left" Height="18" Margin="475,650,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR7_Click"/>
+        <Label x:Name="Laser7" Content="0" HorizontalAlignment="Left" Height="73" Margin="380,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Label Content="Laser 9&#xA;Ściana górna" HorizontalAlignment="Left" Margin="10,311,0,0" VerticalAlignment="Top" Height="43" Width="83"/>
+        <Button x:Name="ON9" Content="ON9" HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Width="40" Click="ON9_Click"/>
+        <Button x:Name="OFF9" Content="OFF9" HorizontalAlignment="Left" Margin="150,310,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF9_Click"/>
+        <Button x:Name="POMIAR9" Content="POMIAR9" HorizontalAlignment="Left" Height="18" Margin="105,335,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR9_Click"/>
+        <Label x:Name="Laser9" Content="0" HorizontalAlignment="Left" Height="73" Margin="10,233,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Label Content="Laser 10 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="163,466,0,0" VerticalAlignment="Top" Height="43" Width="94"/>
+        <Button x:Name="ON10" Content="ON10" HorizontalAlignment="Left" Margin="258,469,0,0" VerticalAlignment="Top" Width="40" Click="ON10_Click"/>
+        <Button x:Name="OFF10" Content="OFF10" HorizontalAlignment="Left" Margin="303,469,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF10_Click"/>
+        <Button x:Name="POMIAR10" Content="POMIAR10" HorizontalAlignment="Left" Height="18" Margin="258,494,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR10_Click"/>
+        <Label x:Name="Laser10" Content="0" HorizontalAlignment="Left" Height="73" Margin="163,391,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Label Content="Laser 12 &#xA;Na połączeniu" HorizontalAlignment="Left" Margin="195,623,0,0" VerticalAlignment="Top" Height="43" Width="88"/>
+        <Button x:Name="ON12" Content="ON12" HorizontalAlignment="Left" Margin="290,625,0,0" VerticalAlignment="Top" Width="40" Click="ON12_Click"/>
+        <Button x:Name="OFF12" Content="OFF12" HorizontalAlignment="Left" Margin="335,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF12_Click"/>
+        <Button x:Name="POMIAR12" Content="POMIAR12" HorizontalAlignment="Left" Height="18" Margin="290,650,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR12_Click"/>
+        <Label x:Name="Laser12" Content="0" HorizontalAlignment="Left" Height="73" Margin="195,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Label Content="Laser 11 &#xA;Ściana boczna" HorizontalAlignment="Left" Margin="10,623,0,0" VerticalAlignment="Top" Height="43" Width="88"/>
+        <Button x:Name="ON11" Content="ON11" HorizontalAlignment="Left" Margin="105,625,0,0" VerticalAlignment="Top" Width="40" Click="ON11_Click"/>
+        <Button x:Name="OFF11" Content="OFF11" HorizontalAlignment="Left" Margin="150,625,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.54,0.543" Click="OFF11_Click"/>
+        <Button x:Name="POMIAR11" Content="POMIAR11" HorizontalAlignment="Left" Height="18" Margin="105,650,0,0" VerticalAlignment="Top" Width="85" Click="POMIAR11_Click"/>
+        <Label x:Name="Laser11" Content="0" HorizontalAlignment="Left" Height="73" Margin="10,547,0,0" VerticalAlignment="Top" Width="180" FontSize="46" BorderBrush="Black" BorderThickness="1"/>
+
+        <Button x:Name="ZERUJ" Content="ZERUJ" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="ZERUJ_Click"/>
+        <Button x:Name="ZERUJ1" Content="ZERUJ1" HorizontalAlignment="Left" Margin="190,358,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ZERUJ1_Click"/>
+        <Label x:Name="ZERO1" Content="0" HorizontalAlignment="Left" Margin="95,353,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" Grid.Column="1" />
+        <Label x:Name="ZERO2" Content="0" HorizontalAlignment="Left" Margin="228,514,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" Grid.Column="1" />
+        <Button x:Name="ZERUJ2" Content="ZERUJ2" HorizontalAlignment="Left" Margin="323,519,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ZERUJ2_Click"/>
+        <Label x:Name="ZERO3" Content="0" HorizontalAlignment="Left" Margin="149,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" Grid.Column="1" />
+        <Button x:Name="ZERUJ3" Content="ZERUJ3" HorizontalAlignment="Left" Margin="244,675,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ZERUJ3_Click"/>
+        <Label x:Name="ZERO4" Content="0" HorizontalAlignment="Left" Margin="339,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" Grid.Column="1" />
+        <Button x:Name="ZERUJ4" Content="ZERUJ4" HorizontalAlignment="Left" Margin="434,675,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ZERUJ4_Click"/>
+        <Label x:Name="ZERO7" Content="0" HorizontalAlignment="Left" Margin="380,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ7" Content="ZERUJ7" HorizontalAlignment="Left" Margin="475,675,0,0" VerticalAlignment="Top" Width="85" Click="ZERUJ7_Click"/>
+        <Label x:Name="ZERO8" Content="0" HorizontalAlignment="Left" Margin="576,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" Grid.ColumnSpan="2" />
+        <Button x:Name="ZERUJ8" Content="ZERUJ8" HorizontalAlignment="Left" Margin="44,675,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ZERUJ8_Click" />
+        <Label x:Name="ZERO6" Content="0" HorizontalAlignment="Left" Margin="516,514,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ6" Content="ZERUJ6" HorizontalAlignment="Left" Margin="611,519,0,0" VerticalAlignment="Top" Width="85" Grid.ColumnSpan="2" Click="ZERUJ6_Click"/>
+        <Label x:Name="ZERO5" Content="0" HorizontalAlignment="Left" Margin="366,353,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ5" Content="ZERUJ5" HorizontalAlignment="Left" Margin="461,358,0,0" VerticalAlignment="Top" Width="85" Click="ZERUJ5_Click" />
+        <Label x:Name="ZERO11" Content="0" HorizontalAlignment="Left" Margin="10,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ11" Content="ZERUJ11" HorizontalAlignment="Left" Margin="105,675,0,0" VerticalAlignment="Top" Width="85" Click="ZERUJ11_Click"/>
+        <Label x:Name="ZERO12" Content="0" HorizontalAlignment="Left" Margin="195,670,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ12" Content="ZERUJ12" HorizontalAlignment="Left" Margin="290,675,0,0" VerticalAlignment="Top" Width="85" Click="ZERUJ12_Click" />
+        <Label x:Name="ZERO10" Content="0" HorizontalAlignment="Left" Margin="163,514,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ10" Content="ZERUJ10" HorizontalAlignment="Left" Margin="258,519,0,0" VerticalAlignment="Top" Width="85"  RenderTransformOrigin="-3.447,0.16" Click="ZERUJ10_Click"/>
+        <Label x:Name="ZERO9" Content="0" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1" Height="25" />
+        <Button x:Name="ZERUJ9" Content="ZERUJ9" HorizontalAlignment="Left" Margin="105,358,0,0" VerticalAlignment="Top" Width="85" Click="ZERUJ9_Click" />
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="30" Margin="177,45,0,0" VerticalAlignment="Top" Width="300"/>
+        <Label x:Name="Path" Content="" HorizontalAlignment="Left" Height="30" Margin="177,117,0,0" VerticalAlignment="Top" Width="300" Background="#FFF7F1F1"/>
+        <Button x:Name="Path1" Content="OPEN" HorizontalAlignment="Left" Height="30" Margin="477,117,0,0" VerticalAlignment="Top" Width="45" Click="Path1_Click"/>
+        <Label Content="Ścieżka do pliku txt:" HorizontalAlignment="Left" Height="30" Margin="177,82,0,0" VerticalAlignment="Top" Width="121"/>
+        <Slider x:Name="Slider" HorizontalAlignment="Left" Height="18" Margin="177,190,0,0" VerticalAlignment="Top" Width="300" SmallChange="10" Maximum="300" TickFrequency="10" Value="30" Minimum="30" LargeChange="10" TickPlacement="TopLeft"/>
+        <Label x:Name="Czas" Content="Interwał pomiaru ciągłego: 30 sekund" HorizontalAlignment="Left" Height="30" Margin="177,152,0,0" VerticalAlignment="Top" Width="300"/>
+
+
+
+    </Grid>
+</Window>
