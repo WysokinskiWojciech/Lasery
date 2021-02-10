@@ -230,10 +230,10 @@ namespace Lasery
                     System.Threading.Thread.Sleep(1500);
                     raw = serialPort.ReadExisting();
                     serialPort.Close();
-                    wynik = raw.Substring(5, 3) + "," + raw.Substring(8, 1) + raw.Substring(11, 1);
+                    wynik = raw.Substring(3, 6).Replace(".",",")+raw.Substring(11,3);
                     if (Decimal.TryParse(wynik, out num))
                     {
-                        results.Add(i, num.ToString());
+                        results.Add(i, (num*1000.0m).ToString("0.000"));
                     }
                 }
                 catch
@@ -303,10 +303,11 @@ namespace Lasery
                     System.Threading.Thread.Sleep(1500);
                     raw = serialPort.ReadExisting();
                     serialPort.Close();
-                    wynik = raw.Substring(5, 3) + "," + raw.Substring(8, 1) + raw.Substring(11, 1);
+                    wynik = raw.Substring(3, 6).Replace(".", ",") + raw.Substring(11, 3);
                     if (Decimal.TryParse(wynik, out num))
                     {
-                        results.Add(i, num.ToString());
+                        results.Add(i, (num * 1000.0m).ToString("0.000"));
+
                     }
                 }
                 catch

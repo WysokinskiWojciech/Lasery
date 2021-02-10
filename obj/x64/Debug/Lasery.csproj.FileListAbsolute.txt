@@ -12,3 +12,4 @@ C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\x64\Debug\Lasery.csproj
 C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\x64\Debug\Lasery.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\x64\Debug\Lasery.exe
 C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\x64\Debug\Lasery.pdb
+C:\Users\Dell\Documents\PLC\Lasery wentylacja\Lasery\obj\x64\Debug\Lasery.csprojAssemblyReference.cache
